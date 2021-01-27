@@ -2,7 +2,26 @@
 read a stream of commands and run it
 
 
+## Building on your gcp project
 
+Fork this repo and connect the gcp to it, build a trigger or using terraform:
+
+    resource "google_cloudbuild_trigger" "trigger" {
+    provider = google-beta
+    
+    name = "givenname"
+    description = "Some description"
+
+    github {   
+        owner = "your github username"
+        name = "cloudworker"
+        push {
+            branch = "main"            
+        }
+    }
+
+    filename = "cloudbuild.yaml"
+}
 
 ## Scheduling on gcp scheduler 
 
