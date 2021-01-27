@@ -7,7 +7,6 @@ GCP_PROJECT ?= "gcp_project"
 CLOUDWORKER_TOPIC ?= "cloudworker-topic"
 CLOUDWORKER_SUB ?= "cloudworker-sub"
 
-
 run:
 	export CLOUDWORKER_TOPIC=$(CLOUDWORKER_TOPIC) && \
 	export GCP_PROJECT=$(GCP_PROJECT) && \
