@@ -24,7 +24,7 @@ else:
 
 # not really necessary
 if  credentials_envname not in os.environ:
-    sys.exit( credentials_envname + " is not set ")
+    print( credentials_envname + " is not set ")
 
 class Consumer(object):
 
